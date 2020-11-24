@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<template
+    format="2"
+    revision="2"
+    name="MVP Fragment"
+    description="Creates a new MVP fragment">
+
+    <category value="MVP" />
+
+    <parameter
+        id="folderName"
+        name="Folder Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="demo"
+        help="MVP root folder" />
+    <parameter
+        id="className"
+        name="Class Name ** Do not suffix Activity **"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Demo"
+        help="The name of the class to create" />
+    <parameter
+        id="activityClass"
+        name="Fragment Name"
+        type="string"
+        constraints="class|unique|nonempty"
+         suggest="${className}Fragment"
+        default="DemoFragment"
+        help="The name of the fragment class to create" />
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="fragment_${classToResource(activityClass)}"
+        default="fragment_custom"
+        help="The name of the layout to create for the fragment" />
+
+    <execute file="recipe.xml.ftl" />
+
+</template>  

@@ -1,0 +1,55 @@
+apply plugin: 'checkstyle'
+apply plugin: 'pmd'
+//apply plugin: 'findbugs'
+
+pmd {
+    toolVersion = '5.8.1' // optionally specify tool version
+}
+preBuild.dependsOn('checkstyle')
+preBuild.dependsOn('pmd')
+
+assemble.dependsOn('lint')
+check.dependsOn('checkstyle')
+check.dependsOn('pmd')
+
+
+task checkstyle(type: Checkstyle ) {
+    description 'Checks if the code meets standards'
+    group 'verification'
+    showViolations = true
+
+    configFile file('./code_quality_tools/checkstyle.xml')
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+
+    classpath = files()
+    ignoreFailures = false
+}
+
+
+task pmd(type: Pmd ) {
+    description 'Run PMD'
+    group 'verification'
+
+    ruleSetFiles = files("./code_quality_tools/pmd.xml")
+    ruleSets = []
+    consoleOutput=true
+    source 'src'
+    include '**/*.java'
+    exclude '**/gen/**'
+
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+    classpath = files()
+
+    ignoreFailures = false
+}
+
+

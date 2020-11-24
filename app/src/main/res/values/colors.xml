@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#20cbdd</color>
+    <color name="colorPrimaryDark">#008b9d</color>
+    <color name="colorSecondary">#3d4a54</color>
+    <color name="splash_bg">#535353</color>
+    <color name="white">#ffffff</color>
+    <color name="offWhite">#d6d5d5</color>
+    <color name="red">#e62431</color>
+    <color name="light_red">#ec535d</color>
+    <color name="camera_red">#cf3339</color>
+    <color name="ripple">#ec6a53</color>
+    <color name="transparent">#0000ffff</color>
+    <color name="qrCode_bg">#F9F9F9</color>
+    <color name="colorScanQrCode">#323232</color>
+    <color name="login_icons_color">#343434</color>
+    <color name="colorLightGray">#B7B7B7</color>
+    <color name="colorMoreLightGray">#7D7D7D</color>
+    <color name="horizontal_line_color">#D6D6D6</color>
+    <color name="colorTouchCircle">#EFEFEF</color>
+    <color name="polishGray">#500404</color>
+    <color name="polishGrayLight">#A24545</color>
+</resources>
