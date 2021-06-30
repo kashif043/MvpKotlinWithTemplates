@@ -1,4 +1,4 @@
-# Android AppDev Boilerplate (Kotlin)
+# Android Boilerplate (Kotlin)
 
 Sample Android app demonstrates the architecture, tools and guidelines that we use when developing for the Android platform
 
@@ -108,8 +108,5 @@ To quickly start a new project from this boilerplate follow the next steps:
 * Update LICENSE to match the requirements of the new project.
 
 ## License
-
-```
-    Copyright 2020 AppDev360.
 
 
